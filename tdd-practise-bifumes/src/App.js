@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>This is a counter app</h1>
-      {/* <Header />  when shallow asserts app component, it won't look at these children */}
+      <button id="increment-btn">Increment</button>
     </div>
   );
 }
