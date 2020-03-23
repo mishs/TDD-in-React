@@ -17,4 +17,9 @@ describe("Counter testing", () => {
     // const linkElement = getByText(/This is a counter app/i);
     // expect(linkElement).toBeInTheDocument();
   });
+
+  test("render button with text `increment`", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find("#increment-btn").text()).toBe("Increment");
+  });
 });
