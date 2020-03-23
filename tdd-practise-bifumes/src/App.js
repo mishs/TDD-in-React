@@ -11,6 +11,9 @@ function App() {
       <button id="increment-btn" onClick={() => setcounter(counter + 1)}>
         Increment
       </button>
+      <button id="decrement-btn" onClick={() => setcounter(counter - 1)}>
+        Increment
+      </button>
     </div>
   );
 }
