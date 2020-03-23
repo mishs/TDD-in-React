@@ -28,4 +28,9 @@ describe("Counter testing", () => {
   test("render initial state value in a div", () => {
     expect(wrapper.find("#counter-value").text()).toBe("0");
   });
+
+  test("render event on button click and increases counter value", () => {
+    wrapper.find("#increment-btn").simulate("click"); //find button and respond to click
+    expect(wrapper.find("#counter-value").text()).toBe("1");
+  });
 });
