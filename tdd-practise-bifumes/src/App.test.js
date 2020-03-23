@@ -2,10 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import App from "./App";
 //setting up Enzyme
-import { configure, shallow } from "enzyme"; //configure for the Enzyme setting up and shallow -enzyme function that creates an instance of your component as a unit without mistakenly asserting behaviou of child components
-import Adapter from "enzyme-adapter-react-16";
-
-configure({ adapter: new Adapter() }); //adapter has to be the new version of the imported
+import { shallow } from "enzyme"; //configure for the Enzyme setting up and shallow -enzyme function that creates an instance of your component as a unit without mistakenly asserting behaviou of child components
 
 //jest API methods that organises test code in blocks vs test method
 describe("Counter testing", () => {
