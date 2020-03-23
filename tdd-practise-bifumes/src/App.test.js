@@ -1,13 +1,13 @@
 import React from "react";
 //setting up Enzyme
-import { shallow } from "enzyme"; //configure for the Enzyme setting up and shallow -enzyme function that creates an instance of your component as a unit without mistakenly asserting behaviou of child components
-import Counter from "./Counter";
+import { mount } from "enzyme"; //configure for the Enzyme setting up and shallow -enzyme function that creates an instance of your component as a unit without mistakenly asserting behaviou of child components
+import App from "./App";
 
 //jest API methods that organises test code in blocks vs test method
 describe("Counter testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<Counter />); //Naming 'wrapper is a convention you can name it anything you want. And shallow insures though they be children inside app (like commented out Header App element), it won't look into them.
+    wrapper = mount(<App />); //Naming 'wrapper is a convention you can name it anything you want. And shallow insures though they be children inside app (like commented out Header App element), it won't look into them.
     //console.log(wrapper.debug()); //to see what's inside the wrapper
   });
   test("render the title of the counter", () => {
