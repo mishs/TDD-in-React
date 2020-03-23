@@ -33,4 +33,13 @@ describe("Counter testing", () => {
     wrapper.find("#increment-btn").simulate("click"); //find button and respond to click
     expect(wrapper.find("#counter-value").text()).toBe("1");
   });
+
+  test("render event on button click and decreases counter value", () => {
+    // first increment in case it be zero on start
+    wrapper.find("#increment-btn").simulate("click"); //find button and respond to click
+    expect(wrapper.find("#counter-value").text()).toBe("1");
+    // now decrement
+    wrapper.find("#decrement-btn").simulate("click"); //find button and respond to click
+    expect(wrapper.find("#counter-value").text()).toBe("0");
+  });
 });
